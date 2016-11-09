@@ -1,0 +1,151 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  margin: 0 auto;
+  text-align: center;
+  word-break: normal;
+  max-width: 1025px;
+}
+
+main header{
+  background: #aaa;
+  color: #fff;
+  padding: 70px 10% 0;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+  align-items:center;
+  align-content:space-between;
+}
+
+main header .intro {
+  max-width: 580px;
+  margin: 0 20px;
+}
+
+main header img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width:1024px){
+  main header {
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+section {
+  padding: 50px 0;
+  background-color: white;
+  color: gray;
+  text-align: center;
+}
+
+#portfolio .portfolio-imgs {
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 95%;
+/*  background-color: aqua;*/
+  list-style: none;
+
+}
+
+#portfolio .portfolio-imgs li{
+  max-width: 45%;
+  margin: 2%;
+  display: inline-block;
+  height: auto;
+}
+
+#portfolio img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width:1024px) {
+  #portfolio .portfolio-imgs {
+    max-width: 1024px;
+  }
+  #portfolio .portfolio-imgs li{
+    max-width: 1024px;
+    height: auto;
+    display:block;
+  }
+  #portfolio img {
+    margin: 20px;
+    max-width: 90%;
+    height:auto;
+  }
+}
+
+.white_hr {
+  margin: 0;
+  size: 5px !important;
+}
+
+#contact {
+  max-width: 100%;
+}
+
+#contact>div, footer>div {
+  margin: 2%;
+  display: inline-block;
+  height: auto;
+  vertical-align:middle;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#contact>div:nth-child(1) {
+  max-width: 50%;
+  width: 50%;
+}
+
+#contact>div:nth-child(2) {
+  max-width: 30%;
+  width: 30%;
+}
+
+@media screen and (max-width:1024px) {
+  #contact>div {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: auto;
+  }
+  
+  #contact>div:nth-child(1), #contact>div:nth-child(2) {
+    max-width: 100%;
+    width: 80%;
+    margin-bottom: 50px;
+  }
+}
+
+footer {
+  margin-top: 0;
+  background-color:#222;
+  color: #9d9d9d;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  display: inline;
+}
