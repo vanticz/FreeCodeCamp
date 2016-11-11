@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-  margin-top: 30%;
+  margin-top: 15%;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
@@ -15,14 +15,15 @@ body {
   text-align: center;
   font-size: 30px;
   color: #E63C3C;
+  transition: color 1s;
 }
 
-#quote-title {
+#quote-source {
   font-size: 16px;
   float: right;
 }
 
-#buttons {
+.buttons {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -35,4 +36,12 @@ body {
   color: white;
   padding: 10px;
   border-radius: 5px;
+}
+
+#tweet:hover, #new_quote:hover {
+  opacity: 0.8;
+}
+
+body, #tweet, #new_quote {
+  transition: background-color 1s;
 }
