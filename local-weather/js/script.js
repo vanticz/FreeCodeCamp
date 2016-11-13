@@ -5,15 +5,43 @@ function getWeather(city) {
   $.ajax( {
     url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=" + APIKEY,
     success: function(data) {
-      temp = data.main.temp;
       weather = data.weather[0].main;
-      city = data.name;
-      country = data.sys.country;
-      $("#temp").html(temp);
+      $("#temp").html(Math.round(data.main.temp));
       $("#weather").html(weather);
-      $("#city").html(city);
-      $("#country").html(country);
-//      console.log("temp: " + temp + "\n" + "weather: " + weather + "\n" + "city: " + city  + "\n" + "country: " + country + "\n");
+      $("#city").html(data.name);
+      $("#country").html(data.sys.country);
+      switch (weather) {
+        case "clear":
+          $("#weatherIcon").attr("class", "wi wi-day-sunny");
+          break;
+        case "rain":
+          $("#weatherIcon").attr("class", "wi wi-rain");
+          break;
+        case "snow":
+          $("#weatherIcon").attr("class", "wi wi-snow");
+          break;
+        case "sleet":
+          $("#weatherIcon").attr("class", "wi wi-sleet");
+          break;
+        case "wind":
+          $("#weatherIcon").attr("class", "wi wi-windy");
+          break;
+        case "fog":
+          $("#weatherIcon").attr("class", "wi wi-fog");
+          break;
+        case "cloud":
+          $("#weatherIcon").attr("class", "wi wi-cloud");
+          break;
+        case "hail":
+          $("#weatherIcon").attr("class", "wi wi-hail");
+          break;
+        case "thunderstorm":
+          $("#weatherIcon").attr("class", "wi wi-thunderstorm");
+          break;
+        case "tornado":
+          $("#weatherIcon").attr("class", "wi wi-tornado");
+          break;
+      }
     },
     cache: false
   });  
@@ -24,14 +52,14 @@ $(document).ready(function() {
 
   $.get('http://ip-api.com/json', function (loc) {
     getWeather(loc.city);
-    $("#toggleFormat").on("click", function() {
+    $("#toggleFormat").click(function() {
       if (tempFormat == "F") {
-        var new_temp = Math.floor(($("#temp").text() - 32) / 1.8);
+        var new_temp = Math.round(($("#temp").text() - 32) / 1.8);
         $("#temp").html(new_temp);
         tempFormat = "C";
         $("#toggleFormat").html(tempFormat);
       } else if (tempFormat == "C") {
-        var new_temp = Math.floor($("#temp").text() * 1.8 + 32);
+        var new_temp = Math.round($("#temp").text() * 1.8 + 32);
         $("#temp").html(new_temp);
         tempFormat = "F";
         $("#toggleFormat").html(tempFormat);

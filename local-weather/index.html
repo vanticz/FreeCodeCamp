@@ -5,6 +5,7 @@
     <title>FreeCodeCamp: Local Weather</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/weather-icons.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -13,15 +14,25 @@
   
   <body>
 
-  <div>
-    <p id="data"></p>
-    <p id="temp"></p>
-    <p id="weather"></p>
-    <p id="city"></p>
-    <p id="country"></p>
-    <button id="toggleFormat">F</button>
+  <div class="container text-center">
     
+    <div class="col-xs-12">
+      <h1>Free C<i class="wi wi-sunrise"></i>de Camp Weather</h1>
+    </div>
     
+    <div class="col-xs-10 col-xs-offset-1">
+      <p><span id="city"></span>, <span id="country"></span></p>
+      <p><span id="temp"></span> &#176;<span id="toggleFormat">F</span></p>
+      <p id="weather"></p>
+      <p><i id="weatherIcon" class="wi wi-day-sunny"></i></p>
+    </div>
+    
+    <footer class="col-xs-10 col-xs-offset-1">
+      <p>by <a href="http://codepen.io/vanticz/" target="_blank">Vantic Zhou</a></p>
+      <p>inspired by project example</p>
+    </footer>
+    
+
   </div>
     
     
