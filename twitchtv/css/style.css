@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #E2A496;
+}
+
+nav>ul>li {
+  background-color: #F47564;
+  color: white;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0px;
+  max-width: 400px;
+  background-color: white;
+  border: 1px solid #F47564;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.row {
+  margin: 0;
+  padding: 5px;
+  cursor: pointer;
+  color: #F47564;
+}
+
+a, a:hover, a:visited {
+  color: inherit;
+}
+
+.channel_detail {
+  text-align: left;
+  height: 50px;
+  padding-top: 5px;
+}
+
+.game_detail {
+  color: #E4E0E1;
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+span[class$="online_text"] {
+  color: #0B2B3F;
+}
+
+.logo {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+}
