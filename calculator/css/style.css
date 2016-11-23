@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 400px;
+  height: auto;
+  margin: 5% auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px silver;
+}
+
+#input_panel {
+  width: 90%;
+  margin: 15px auto;
+  border: 1px solid silver;
+  border-radius: 5px;
+  text-align: right;
+}
+
+#display {
+  font-size: 35px;
+}
+
+.right-margin {
+  margin-right: 5px;
+}
+
+#buttons {
+  margin: 15px auto;
+  font-weight: bold;
+  width: 340px;
+  height: auto;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  display: inline-block;
+  color: white;
+  margin: 7px;
+  height: 50px;
+  width: 50px;
+  color: white;
+}
+
+.special {
+  background-color: orange;
+  color: white;
+}
+
+.vertical_long {
+  position: absolute;
+  height: 114px;
+}
+
+.horizontal_long {
+  width: 118px;
+}
+
+button, button:hover, button:active, button:visited {
+  text-decoration: none;
+  outline: none;
+}
